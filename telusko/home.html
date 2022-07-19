@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Hello {{name}}!!!!</h1>
+
+<form action="add" method="post" > <!-- this is how to create a form that on which you can input data and 
+after equate the ction to a function in views which perfoms a specific operation when you press submittd -->
+
+{% csrf_token %}
+
+    enter first number : <input type="text" name="num1"><br> <!-- the <br> enables you to go to the next line 
+    on the web page once the first box appears -->
+
+    enter second number : <input type="text" name="num2"><br>
+    <input type="submit">
+
+
+{%endblock%}
